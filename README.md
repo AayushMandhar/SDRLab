@@ -109,6 +109,12 @@ SDRLab/
 │       ├── flowgraph.py           # Programmatic gr.top_block assembly
 │       └── sdrlab_simulation.grc  # GRC Companion flowchart design
 │
+├── streamlit_app/                 # Streamlit Web Frontend Package
+│   ├── app.py                     # Main dashboard UI entry point
+│   ├── components/                # Modular UI widgets (sidebar components)
+│   ├── utils/                     # Dashboard simulation runner utilities
+│   └── assets/                    # Static dashboard media assets
+│
 ├── examples/                      # Developer usage examples
 │   ├── __init__.py
 │   ├── basic_run.py               # Programmatic single point simulation API example
@@ -229,6 +235,13 @@ python examples/basic_run.py
 python examples/snr_sweep_example.py
 ```
 
+### Running the Streamlit Dashboard
+
+SDRLab provides an interactive Streamlit dashboard. Start the local dashboard with:
+```bash
+streamlit run streamlit_app/app.py
+```
+
 ---
 
 ## 11. Configuration
@@ -328,13 +341,14 @@ Below are placeholders for the plots generated during the sweep.
 - [x] Cross-correlation peak timing synchronization.
 - [x] Automated report generation.
 
-### [V1.1] - Planned
-- [ ] Interactive Streamlit visual sweep dashboard.
-- [ ] Phase tracking loops (Costas Loop carrier synchronizer).
+### [V1.1] - Completed
+- [x] Interactive Streamlit visual sweep dashboard.
+- [x] Sibling relative paths and Windows resource leak resolutions.
 
 ### [V1.2] - Planned
 - [ ] 16-QAM and 64-QAM modulator plugins.
 - [ ] Gardner timing recovery loops for arbitrary fractional symbol timing offsets.
+- [ ] Phase tracking loops (Costas Loop carrier synchronizer).
 
 ### [V2.0] - Planned
 - [ ] RTL-SDR and USRP hardware source block integrations.
