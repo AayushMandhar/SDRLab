@@ -1,0 +1,27 @@
+{
+  "engine": "auto",
+  "num_bits": 40000,
+  "sample_rate": 1000000,
+  "sps": 4,
+  "excess_bw": 0.35,
+  "filter_span": 8,
+  "modulations": [
+    "BPSK",
+    "QPSK"
+  ],
+  "snr_db_range": {
+    "start": 0.0,
+    "stop": 12.0,
+    "step": 2.0
+  },
+  "channel_impairments": {
+    "cfo_hz": 0.0,
+    "phase_noise_var": 0.0,
+    "multipath_taps": [1.0, 0.2, 0.05]
+  },
+  "outputs": {
+    "output_dir": "outputs",
+    "generate_plots": true,
+    "generate_reports": true
+  }
+}
