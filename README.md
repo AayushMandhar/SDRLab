@@ -112,6 +112,7 @@ SDRLab/
 ├── streamlit_app/                 # Streamlit Web Frontend Package
 │   ├── app.py                     # Main dashboard UI entry point
 │   ├── components/                # Modular UI widgets (sidebar components)
+│   ├── views/                     # Multi-page dashboard render modules
 │   ├── utils/                     # Dashboard simulation runner utilities
 │   └── assets/                    # Static dashboard media assets
 │

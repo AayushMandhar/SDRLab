@@ -1,0 +1,256 @@
+/* Custom Premium CSS Styles for SDRLab Dashboard */
+
+/* Global container styling */
+.reportview-container {
+    background-color: #0E1117;
+}
+
+/* Landing Page Styles */
+.landing-logo {
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 2rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.landing-title {
+    font-size: 3.5rem;
+    color: #00F0FF;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 0.1rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.landing-subtitle {
+    font-size: 1.4rem;
+    color: #8A99AD;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.landing-intro {
+    font-size: 1.1rem;
+    color: #CCD6E0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.6;
+}
+
+.landing-badges {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.landing-badge {
+    display: inline-block;
+    background-color: #1E293B;
+    color: #38BDF8;
+    border: 1px solid #334155;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0.3rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.landing-badge:hover {
+    transform: translateY(-2px);
+    border-color: #38BDF8;
+    background-color: #0F172A;
+}
+
+/* Main Dashboard Styles */
+.main-title {
+    font-size: 2.2rem;
+    color: #00F0FF;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
+}
+
+.sub-title {
+    font-size: 1rem;
+    color: #8A99AD;
+    margin-bottom: 1.5rem;
+}
+
+/* KPI Metric Cards */
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.kpi-card {
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+}
+
+.kpi-card-ber {
+    background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+    border: 1px solid #1E40AF;
+}
+.kpi-card-ber::before {
+    background-color: #00F0FF;
+}
+.kpi-card-ber:hover {
+    transform: translateY(-4px);
+    border-color: #00F0FF;
+    box-shadow: 0 10px 15px -3px rgba(0, 240, 255, 0.15);
+}
+.kpi-card-ber .kpi-val {
+    color: #00F0FF;
+}
+
+.kpi-card-theory {
+    background: linear-gradient(135deg, #0F172A 0%, #4D1A4A 100%);
+    border: 1px solid #701A75;
+}
+.kpi-card-theory::before {
+    background-color: #D946EF;
+}
+.kpi-card-theory:hover {
+    transform: translateY(-4px);
+    border-color: #D946EF;
+    box-shadow: 0 10px 15px -3px rgba(217, 70, 239, 0.15);
+}
+.kpi-card-theory .kpi-val {
+    color: #D946EF;
+}
+
+.kpi-card-evm {
+    background: linear-gradient(135deg, #0F172A 0%, #064E3B 100%);
+    border: 1px solid #065F46;
+}
+.kpi-card-evm::before {
+    background-color: #10B981;
+}
+.kpi-card-evm:hover {
+    transform: translateY(-4px);
+    border-color: #10B981;
+    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.15);
+}
+.kpi-card-evm .kpi-val {
+    color: #10B981;
+}
+
+.kpi-card-time {
+    background: linear-gradient(135deg, #0F172A 0%, #7C2D12 100%);
+    border: 1px solid #9A3412;
+}
+.kpi-card-time::before {
+    background-color: #F97316;
+}
+.kpi-card-time:hover {
+    transform: translateY(-4px);
+    border-color: #F97316;
+    box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.15);
+}
+.kpi-card-time .kpi-val {
+    color: #F97316;
+}
+
+.kpi-val {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00F0FF;
+    margin-top: 0.3rem;
+}
+
+.kpi-lbl {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Glassmorphism Configuration Card */
+.config-summary-card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Stepper Style Progress */
+.stepper-container {
+    background-color: #0F172A;
+    border: 1px solid #1E293B;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.stepper-stage {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+.stepper-stage.active {
+    opacity: 1;
+    color: #00F0FF;
+}
+
+.stepper-stage.completed {
+    opacity: 0.8;
+    color: #10B981;
+}
+
+.stepper-icon {
+    font-size: 1.2rem;
+    margin-right: 0.8rem;
+}
+
+.stepper-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Footer Styling */
+.dashboard-footer {
+    border-top: 1px solid #1E293B;
+    padding-top: 1.5rem;
+    margin-top: 4rem;
+    text-align: center;
+    color: #64748B;
+    font-size: 0.85rem;
+}
+
+.footer-highlight {
+    color: #38BDF8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
