@@ -56,7 +56,7 @@ st.markdown("""
         color: #495057;
     }
     </style>
-""", unsafe_style_html=True)
+""", unsafe_allow_html=True)
 
 
 def load_file_content(path: Path) -> str:
@@ -81,8 +81,8 @@ def main():
     figures_dir = outputs_dir / "figures"
 
     if page == "Dashboard":
-        st.markdown('<div class="main-title">📡 SDRLab Simulation Control Panel</div>', unsafe_style_html=True)
-        st.markdown('<div class="sub-title">Interactive Wireless Communication Performance Analyzer</div>', unsafe_style_html=True)
+        st.markdown('<div class="main-title">📡 SDRLab Simulation Control Panel</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sub-title">Interactive Wireless Communication Performance Analyzer</div>', unsafe_allow_html=True)
         
         # Sidebar parameters configuration
         st.sidebar.markdown("---")
@@ -96,6 +96,8 @@ def main():
         ).lower()
         if engine == "native simulation":
             engine = "simulation"
+        elif engine == "gnu radio":
+            engine = "gnuradio"
 
         modulation = st.sidebar.selectbox(
             "Modulation Scheme",
@@ -142,13 +144,13 @@ def main():
         st.subheader("Current Settings Summary")
         col1, col2, col3, col4 = st.columns(4)
         with col1:
-            st.markdown(f'<div class="metric-card"><div class="metric-lbl">Target Backend</div><div class="metric-val">{engine.upper()}</div></div>', unsafe_style_html=True)
+            st.markdown(f'<div class="metric-card"><div class="metric-lbl">Target Backend</div><div class="metric-val">{engine.upper()}</div></div>', unsafe_allow_html=True)
         with col2:
-            st.markdown(f'<div class="metric-card"><div class="metric-lbl">Modulation</div><div class="metric-val">{modulation}</div></div>', unsafe_style_html=True)
+            st.markdown(f'<div class="metric-card"><div class="metric-lbl">Modulation</div><div class="metric-val">{modulation}</div></div>', unsafe_allow_html=True)
         with col3:
-            st.markdown(f'<div class="metric-card"><div class="metric-lbl">SNR Range</div><div class="metric-val">{snr_start}dB to {snr_stop}dB</div></div>', unsafe_style_html=True)
+            st.markdown(f'<div class="metric-card"><div class="metric-lbl">SNR Range</div><div class="metric-val">{snr_start}dB to {snr_stop}dB</div></div>', unsafe_allow_html=True)
         with col4:
-            st.markdown(f'<div class="metric-card"><div class="metric-lbl">Bit Budget</div><div class="metric-val">{num_bits:,} bits</div></div>', unsafe_style_html=True)
+            st.markdown(f'<div class="metric-card"><div class="metric-lbl">Bit Budget</div><div class="metric-val">{num_bits:,} bits</div></div>', unsafe_allow_html=True)
 
         st.markdown("---")
 
